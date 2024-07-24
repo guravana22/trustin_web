@@ -194,6 +194,12 @@
     margin-top: 10px;
     margin-left: unset !important;
   }
+  .login_button {
+    width: 25%;
+  }
+  .outline_button {
+    width: 25%;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -250,9 +256,23 @@
   }
 }
 
+@media (min-width: 577px) and (max-width: 768px) {
+  .login_button {
+    width: 32%;
+  }
+  .outline_button {
+    width: 32%;
+  }
+}
 @media screen and (max-width: 576px) {
   .banner_section_heading {
     padding-bottom: 4vw;
+  }
+  .login_button {
+    width: 70%;
+  }
+  .outline_button {
+    width: 70%;
   }
 }
 

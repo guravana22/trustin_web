@@ -76,7 +76,13 @@ const Header = () => {
                 <img src={toggle} alt="no_img" />
               </button>
               <li className="nav-item d-block d-md-none">
-                <Primarybutton name="Get Started" />
+                <button
+                  type="button"
+                  className="login_button"
+                  style={{ width: "unset" }}
+                >
+                  Get Started
+                </button>
               </li>
 
               <div
@@ -234,7 +240,13 @@ const Header = () => {
                     </NavLink>
                   </li>
                   <li className="nav-item p-0 d-none d-xl-block">
-                    <Primarybutton name="Get Started" />
+                    <button
+                      type="button"
+                      className="login_button"
+                      style={{ width: "unset" }}
+                    >
+                      Get Started
+                    </button>
                   </li>
                 </ul>
               </div>
