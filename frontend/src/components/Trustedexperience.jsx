@@ -10,7 +10,6 @@ import Increase from "../assets/images/increase.svg";
 import enhanced from "../assets/images/enhanced.svg";
 import transctionbg from "../assets/images/transctionbg.svg";
 import quickrelease from "../assets/images/quick.svg";
-import Tabs from "./Tabs";
 const tabsData = [
   {
     id: "pills-buyer",
