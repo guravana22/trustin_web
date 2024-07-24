@@ -29,3 +29,15 @@ Running the Project
 Building the Project
 
   1. npm run build
+
+
+
+Project Structure
+
+src/: Contains the source code for the project.
+components/: React components used in the project.
+assets/: CSS and images files.
+App.js: Main application component.
+index.js: Entry point for the React application.
+public/: Contains static assets like the index.html file.
+package.json: Manages project dependencies and scripts.
