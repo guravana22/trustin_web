@@ -38,7 +38,7 @@ Building the Project
 Project Structure
 
 1. src/: Contains the source code for the project.
-     ##### assets/: CSS and images files.
+     ##### assets/: Css and images files.
     ##### components/: React components used in the project.
     ##### App.js: Main application component.
 5. index.js: Entry point for the React application.
