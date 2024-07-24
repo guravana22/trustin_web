@@ -448,7 +448,7 @@ const Ourcapabilities = () => {
                     tabIndex="0"
                   >
                     <div className="container-fluid text-start">
-                      <div className="row row-cols-1 row-cols-md-3 g-4">
+                      <div className="row row-cols-1 row-cols-md-3 g-4 mt-1">
                         {renderCards(tab.cards, showAll[tab.id])}
                       </div>
                     </div>
