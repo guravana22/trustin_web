@@ -12,9 +12,9 @@ npm or Yarn: npm (comes with Node.js) or Yarn (an alternative package manager). 
 
 Installation 
 
-1.Clone the Repository
+1. Clone the Repository
      git clone https://github.com/guravana22/trustin_web.git
-2.Navigate to Project Directory
+2. Navigate to Project Directory
    cd frontend
 3. Install Dependencies
    npm install
