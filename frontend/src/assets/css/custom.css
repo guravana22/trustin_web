@@ -493,12 +493,12 @@ ul li span {
 }
 
 .trustedexperience_cards {
-  background: linear-gradient(
+  /* background: linear-gradient(
       0deg,
       rgba(255, 220, 201, 0.4),
       rgba(255, 220, 201, 0.4)
     ),
-    #ffffff;
+    #ffffff; */
   background-color: #ffdcc9;
   position: relative;
   border-radius: 8px;

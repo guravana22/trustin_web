@@ -10,6 +10,7 @@ import Increase from "../assets/images/increase.svg";
 import enhanced from "../assets/images/enhanced.svg";
 import transctionbg from "../assets/images/transctionbg.svg";
 import quickrelease from "../assets/images/quick.svg";
+import Tabs from "./Tabs";
 const tabsData = [
   {
     id: "pills-buyer",
@@ -42,7 +43,7 @@ const tabsData = [
           "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
         link: "#/",
         bottomImg: img3,
-        bgcolor: "rgba(174, 255, 222, 0.4)",
+        bgcolor: "rgba(255, 239, 197, 0.4)",
       },
       {
         id: 4,
@@ -51,7 +52,7 @@ const tabsData = [
         description:
           "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
         bottomImg: img4,
-        bgcolor: "rgba(255, 220, 201, 0.4)",
+        bgcolor: "rgba(174, 255, 222, 0.4)",
       },
       {
         id: 5,
@@ -105,7 +106,7 @@ const tabsData = [
           "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
         link: "#/",
         bottomImg: img6,
-        bgcolor: "rgba(174, 255, 222, 0.4)",
+        bgcolor: "rgba(255, 239, 197, 0.4)",
       },
       {
         id: 4,
@@ -114,7 +115,7 @@ const tabsData = [
         description:
           "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
         bottomImg: img5,
-        bgcolor: "rgba(255, 220, 201, 0.4)",
+        bgcolor: "rgba(174, 255, 222, 0.4)",
       },
       {
         id: 5,
@@ -168,7 +169,7 @@ const tabsData = [
           "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
         link: "#/",
         bottomImg: img3,
-        bgcolor: "rgba(174, 255, 222, 0.4)",
+        bgcolor: "rgba(255, 239, 197, 0.4)",
       },
       {
         id: 4,
@@ -177,7 +178,7 @@ const tabsData = [
         description:
           "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
         bottomImg: img4,
-        bgcolor: "rgba(255, 220, 201, 0.4)",
+        bgcolor: "rgba(174, 255, 222, 0.4)",
       },
       {
         id: 5,
@@ -322,11 +323,14 @@ const Trustedexperience = () => {
   const renderCards = (cards) => {
     return cards.map((card) => (
       <div key={card.id} className="col-lg-4 col-md-6 p-3">
-        <div
-          className="card trustedexperience_cards"
-          style={{ backgroundColor: card.bgcolor }}
-        >
-          <div className="card-body" style={{ padding: "30px 0px 20px 20px" }}>
+        <div className="card border border-0">
+          <div
+            className="card-body trustedexperience_cards"
+            style={{
+              backgroundColor: card.bgcolor,
+              padding: "30px 0px 20px 20px",
+            }}
+          >
             <div className="image-container separator">
               <img
                 src={card.bottomImg}
@@ -343,10 +347,10 @@ const Trustedexperience = () => {
               )} */}
             </div>
           </div>
-        </div>
-        <div className="mt-4">
-          <h3 className="card_heading">{card.title}</h3>
-          <p className="small card_descripition">{card.description}</p>
+          <div className="mt-4">
+            <h3 className="card_heading">{card.title}</h3>
+            <p className="small card_descripition">{card.description}</p>
+          </div>
         </div>
       </div>
     ));
