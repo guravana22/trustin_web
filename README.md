@@ -13,7 +13,7 @@ Prerequisites
 Installation steps
 
 1. Clone the Repository
-      ### git clone https://github.com/guravana22/trustin_web.git
+      ##### git clone https://github.com/guravana22/trustin_web.git
 2. Navigate to Project Directory
    cd frontend
 3. Install Dependencies
