@@ -1,0 +1,395 @@
+@media (min-width: 0px) and (max-width: 768px) {
+  .home-section {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .navbar-expand-md {
+    background-color: rgb(3, 41, 68, 1) !important;
+  }
+
+  .banner_section {
+    height: auto;
+    padding-bottom: 50px;
+  }
+  .navbar {
+    background-color: #fff !important;
+  }
+
+  .contact_us_section {
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+
+  .owl-nav {
+    display: none;
+  }
+
+  .banner_section_heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 50px;
+    color: #ffffff;
+    padding-bottom: 10px;
+  }
+
+  #container-fluid {
+    display: none;
+  }
+
+  ul.footer_links {
+    padding: 0px !important;
+  }
+  .main_heading {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .description {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .sub_heading {
+    font-size: 24px;
+    line-height: 33px;
+  }
+  .sub_heading_paragraph {
+    width: 100%;
+  }
+  .sub_heading_paragraph {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .card_descripition {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .card1 h3 {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .card1 p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .card_heading {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .card_description {
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+  .Workexperience_card_data .title {
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+  }
+  .milestoneexperiences_section h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .client_section h3 {
+    font-size: 18px;
+    line-height: 23px;
+    font-style: normal;
+  }
+  .readytransct_section h3 {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 700;
+    color: #000714;
+  }
+  .banner_section_paragraph {
+    width: 100%;
+  }
+  .client_section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .readytransct_section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .ourcapabilities_section {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  .banner_section_footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .outline {
+    font-size: 13px;
+    outline: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner_section_footer {
+    height: auto;
+  }
+
+  ul.footer_links {
+    padding: 0px !important;
+  }
+}
+
+@media (min-width: 769px) and(max-width:1023) {
+  .banner_section_heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px !important;
+    line-height: 76px;
+    color: #ffffff;
+    padding-bottom: 40px;
+  }
+
+  .banner_section {
+    padding-top: 125px;
+    padding-bottom: 200px;
+    position: relative;
+  }
+
+  .banner_section_footer {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    background-color: #000714;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 980px) {
+  .banner_section_heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 62px;
+    line-height: 76px;
+    color: #ffffff;
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .banner_section {
+    padding-bottom: 0px;
+    position: relative;
+    height: auto;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .banner_buttons {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .start_button {
+    margin-top: 10px;
+    margin-left: unset !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 93.4285714286%;
+  }
+}
+
+.xl-align-items-none {
+  align-items: center !important;
+}
+
+@media (min-width: 320px) and (max-width: 1200px) {
+  .navbar {
+    background-color: #fff !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl-align-items-none {
+    align-items: flex-start !important;
+  }
+}
+
+.footer_icons img {
+  height: 24px;
+  width: 24px;
+}
+
+.footer_paragraph {
+  font-size: 14px;
+  line-height: 24px;
+  color: #5d636f;
+  line-height: 22px;
+}
+
+.banner_section_heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1vw;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .banner_section_heading {
+    font-size: 3.5vw;
+    padding-bottom: 3vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner_section_heading {
+    padding-bottom: 4vw;
+  }
+}
+
+.navbar .dropdown-menu {
+  border: none;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.05);
+  color: #fff !important;
+  position: relative;
+}
+
+a:hover {
+  color: unset !important;
+}
+
+.dropdown_menu a:hover {
+  color: #00edc1;
+  background-color: unset;
+  transition: 0.3s;
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+  font-weight: 400;
+  margin-bottom: -8px;
+}
+
+.dropdown_menu a {
+  font-size: 14px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.dropdown-item p {
+  display: none;
+  margin-top: 5px;
+}
+
+@container (min-width: 599px) {
+  .container {
+    width: 70%;
+  }
+}
+
+.dropdown-item img {
+  vertical-align: middle;
+  margin-right: 5px;
+  transition: filter 0.3s;
+}
+
+.dropdown_menu h6 {
+  font-size: 12px;
+  font-weight: 300;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+a span {
+  display: none;
+}
+
+.dropdown-item:hover span {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  margin-left: 15px;
+}
+
+@media (min-width: 991px) {
+  .dropdown-carrot {
+    top: -9px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .error-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .error-container {
+    text-align: center;
+    color: #000714;
+    display: block;
+  }
+}
+
+@media (max-width: 992px) {
+  .workexperience_cards {
+    padding-left: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .workexperience_cards {
+    padding-left: 2%;
+  }
+}
+
+@media (max-width: 576px) {
+  .workexperience_cards {
+    padding-left: 1%;
+  }
+}
+
+@media (max-width: 992px) {
+  .workexperience_cards {
+    padding-left: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .workexperience_cards {
+    padding-left: 2%;
+  }
+}
+
+@media (max-width: 576px) {
+  .workexperience_cards {
+    padding-left: 1%;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-padding {
+    padding: 40px 20px;
+  }
+
+  .screenshot_slider .owl-item .milestoneexperience_item {
+    margin: 30px 0;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  .section-padding {
+    padding: 60px 30px;
+  }
+
+  .screenshot_slider .owl-item .milestoneexperience_item {
+    margin: 40px 0;
+  }
+}

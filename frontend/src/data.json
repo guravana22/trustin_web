@@ -1,0 +1,207 @@
+[
+    {
+      "id": "pills-buyer",
+      "label": "For Buyer",
+      "cards": [
+        {
+          "id": 1,
+          "title": "Instant Access to Escrow Account",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "bottomImg": "img1.png",
+          "bgcolor": "rgba(255, 220, 201, 0.4)"
+        },
+        {
+          "id": 2,
+          "title": "Protection Against Fraud",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "link": "#/",
+          "bottomImg": "img2.png",
+          "bgcolor": "rgba(232, 223, 255, 0.4)"
+        },
+        {
+          "id": 3,
+          "title": "Verification of Goods/Services",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "link": "#/",
+          "bottomImg": "img3.png",
+          "bgcolor": "rgba(174, 255, 222, 0.4)"
+        },
+        {
+          "id": 4,
+          "title": "Regulated and Compliant",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "bottomImg": "img4.png",
+          "bgcolor": "rgba(255, 220, 201, 0.4)"
+        },
+        {
+          "id": 5,
+          "title": "Automated Processes",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "bottomImg": "img5.png",
+          "bgcolor": "rgba(188, 223, 231, 0.4)"
+        },
+        {
+          "id": 6,
+          "title": "Easy Tracking",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "link": "#/",
+          "bottomImg": "img6.png",
+          "bgcolor": "rgba(251, 209, 221, 0.4)"
+        }
+      ]
+    },
+    {
+      "id": "pills-seller",
+      "label": "For Sellers",
+      "cards": [
+        {
+          "id": 1,
+          "title": "Instant Access to Escrow Account",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "bottomImg": "img1.png",
+          "bgcolor": "rgba(255, 220, 201, 0.4)"
+        },
+        {
+          "id": 2,
+          "title": "Assured Payment",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "link": "#/",
+          "bottomImg": "img2.png",
+          "bgcolor": "rgba(232, 223, 255, 0.4)"
+        },
+        {
+          "id": 3,
+          "title": "Fraud Protection",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "link": "#/",
+          "bottomImg": "img6.png",
+          "bgcolor": "rgba(174, 255, 222, 0.4)"
+        },
+        {
+          "id": 4,
+          "title": "Automated Workflows",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "bottomImg": "img5.png",
+          "bgcolor": "rgba(255, 220, 201, 0.4)"
+        },
+        {
+          "id": 5,
+          "title": "Simplified Documentation",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "bottomImg": "img3.png",
+          "bgcolor": "rgba(188, 223, 231, 0.4)"
+        },
+        {
+          "id": 6,
+          "title": "Quick Release of Funds",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "link": "#/",
+          "bottomImg": "quickrelease.png",
+          "bgcolor": "rgba(251, 209, 221, 0.4)"
+        }
+      ]
+    },
+    {
+      "id": "pills-broker",
+      "label": "For Broker",
+      "cards": [
+        {
+          "id": 1,
+          "title": "Instant Access to Escrow Account",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "bottomImg": "img1.png",
+          "bgcolor": "rgba(255, 220, 201, 0.4)"
+        },
+        {
+          "id": 2,
+          "title": "Protection Against Fraud",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "link": "#/",
+          "bottomImg": "img2.png",
+          "bgcolor": "rgba(232, 223, 255, 0.4)"
+        },
+        {
+          "id": 3,
+          "title": "Verification of Goods/Services",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "link": "#/",
+          "bottomImg": "img3.png",
+          "bgcolor": "rgba(174, 255, 222, 0.4)"
+        },
+        {
+          "id": 4,
+          "title": "Regulated and Compliant",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "bottomImg": "img4.png",
+          "bgcolor": "rgba(255, 220, 201, 0.4)"
+        },
+        {
+          "id": 5,
+          "title": "Automated Processes",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "bottomImg": "img5.png",
+          "bgcolor": "rgba(188, 223, 231, 0.4)"
+        },
+        {
+          "id": 6,
+          "title": "Easy Tracking",
+          "description": "Reliable escrow solutions for real estate deals, protecting all parties involved in property transactions.",
+          "link": "#/",
+          "bottomImg": "img6.png",
+          "bgcolor": "rgba(251, 209, 221, 0.4)"
+        }
+      ]
+    },
+    {
+      "id": "pills-enterprise",
+      "label": "For Enterprise",
+      "cards": [
+        {
+          "id": 1,
+          "title": "Enhanced Top Line",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "bottomImg": "enhanced.png",
+          "bgcolor": "rgba(255, 220, 201, 0.4)"
+        },
+        {
+          "id": 2,
+          "title": "Increased Credibility and Trust",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "link": "#/",
+          "bottomImg": "Increase.png",
+          "bgcolor": "rgba(232, 223, 255, 0.4)"
+        },
+        {
+          "id": 3,
+          "title": "Streamlined Operations",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "link": "#/",
+          "bottomImg": "img2.png",
+          "bgcolor": "rgba(174, 255, 222, 0.4)"
+        },
+        {
+          "id": 4,
+          "title": "Improved Cash Flow",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "bottomImg": "costeff.png",
+          "bgcolor": "rgba(255, 220, 201, 0.4)"
+        },
+        {
+          "id": 5,
+          "title": "Simplified Documentation",
+          "description": "Lorem ipsum dolor sit amet consectetur. Netus est enim aliquet tortor purus risus morbi.",
+          "bottomImg": "img3.png",
+          "bgcolor": "rgba(188, 223, 231, 0.4)"
+        },
+        {
+          "id": 6,
+          "title": "Cost Efficiency",
+          "description": "Reliable escrow solutions for real estate deals, protecting all parties involved in property transactions.",
+          "link": "#/",
+          "bottomImg": "costeff.png",
+          "bgcolor": "rgba(251, 209, 221, 0.4)"
+        }
+      ]
+    }
+  ]
+  

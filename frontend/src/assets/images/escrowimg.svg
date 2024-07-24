@@ -1,0 +1,15 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"  className="hover-svg">
+<g clip-path="url(#clip0_354_581)">
+<path d="M2.9375 17.5625H37.0625" stroke="white" stroke-width="2.08929" stroke-linecap="round" stroke-linejoin="round" className="svg-path"/>
+<path d="M34.625 27.3125V30.9688C34.625 31.292 34.4966 31.602 34.268 31.8305C34.0395 32.0591 33.7295 32.1875 33.4062 32.1875H29.75C29.4268 32.1875 29.1168 32.0591 28.8882 31.8305C28.6597 31.602 28.5312 31.292 28.5312 30.9688V27.3125" stroke="white" stroke-width="2.08929" stroke-linecap="round" stroke-linejoin="round" className="svg-path"/>
+<path d="M11.4688 27.3125V30.9688C11.4688 31.292 11.3403 31.602 11.1118 31.8305C10.8832 32.0591 10.5732 32.1875 10.25 32.1875H6.59375C6.27052 32.1875 5.96052 32.0591 5.73196 31.8305C5.5034 31.602 5.375 31.292 5.375 30.9688V27.3125" stroke="white" stroke-width="2.08929" stroke-linecap="round" stroke-linejoin="round" className="svg-path"/>
+<path d="M10.25 22.4375H12.6875" stroke="white" stroke-width="2.08929" stroke-linecap="round" stroke-linejoin="round" className="svg-path" className="svg-path"/>
+<path d="M27.3125 22.4375H29.75" stroke="white" stroke-width="2.08929" stroke-linecap="round" stroke-linejoin="round" className="svg-path" className="svg-path"/>
+<path d="M34.625 17.5625L30.0714 7.31738C29.9757 7.10199 29.8195 6.91899 29.6219 6.79055C29.4242 6.66211 29.1935 6.59375 28.9578 6.59375H11.0422C10.8065 6.59375 10.5758 6.66211 10.3781 6.79055C10.1805 6.91899 10.0243 7.10199 9.92855 7.31738L5.375 17.5625V27.3125H34.625V17.5625Z" stroke="white" stroke-width="2.275" stroke-linecap="round" stroke-linejoin="round" className="svg-path"/>
+</g>
+<defs>
+<clipPath id="clip0_354_581">
+<rect width="39" height="39" fill="white" transform="translate(0.5 0.5)"/>
+</clipPath>
+</defs>
+</svg>
