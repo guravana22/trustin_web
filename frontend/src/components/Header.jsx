@@ -103,7 +103,7 @@ const Header = () => {
                   <li className="nav-item">
                     <NavLink
                       className="nav-link"
-                      to="/platform"
+                      to="/#"
                       activeClassName="disabled"
                       disabled
                     >
@@ -119,7 +119,7 @@ const Header = () => {
                       className={`nav-link dropdown-toggle d-flex justify-content-strt align-items-center gap-0 ${
                         activeDropdown ? "show" : ""
                       }`}
-                      href="#"
+                      href="/#"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded={activeDropdown ? "true" : "false"}
@@ -134,7 +134,7 @@ const Header = () => {
                       <li>
                         <NavLink
                           className="dropdown-item"
-                          to="/usecase-one"
+                          to="/#"
                           activeClassName="active"
                         >
                           UsecaseOne
@@ -143,7 +143,7 @@ const Header = () => {
                       <li>
                         <NavLink
                           className="dropdown-item"
-                          to="/usecase-two"
+                          to="/#"
                           activeClassName="active"
                         >
                           UsecaseTwo
@@ -152,7 +152,7 @@ const Header = () => {
                       <li>
                         <NavLink
                           className="dropdown-item"
-                          to="/usecase-three"
+                          to="/#"
                           activeClassName="active"
                         >
                           UsecaseThree
@@ -161,7 +161,7 @@ const Header = () => {
                       <li>
                         <NavLink
                           className="dropdown-item"
-                          to="/usecas-four"
+                          to="/#"
                           activeClassName="active"
                         >
                           UsecaseFour
@@ -174,17 +174,17 @@ const Header = () => {
                       activeDropdown ? "show" : ""
                     }`}
                   >
-                    <Link
+                    <NavLink
                       className={`nav-link dropdown-toggle d-flex justify-content-strt align-items-center gap-0 ${
                         activeDropdown ? "show" : ""
                       }`}
-                      href="#"
+                      to="/#"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded={activeDropdown ? "true" : "false"}
                     >
                       Company
-                    </Link>
+                    </NavLink>
                     <ul
                       className={`dropdown-menu ${
                         activeDropdown ? "show" : ""
@@ -193,7 +193,7 @@ const Header = () => {
                       <li>
                         <NavLink
                           className="dropdown-item"
-                          to="/companyone"
+                          to="/#"
                           activeClassName="active"
                         >
                           CompanyOne
@@ -202,7 +202,7 @@ const Header = () => {
                       <li>
                         <NavLink
                           className="dropdown-item"
-                          to="/comapny-two"
+                          to="/#"
                           activeClassName="active"
                         >
                           CompanyTwo
@@ -211,7 +211,7 @@ const Header = () => {
                       <li>
                         <NavLink
                           className="dropdown-item"
-                          to="/company-three"
+                          to="/#"
                           activeClassName="active"
                         >
                           CompanyThree
@@ -220,7 +220,7 @@ const Header = () => {
                       <li>
                         <NavLink
                           className="dropdown-item"
-                          to="/company-four"
+                          to="/#"
                           activeClassName="active"
                         >
                           CompanyFour
@@ -233,7 +233,7 @@ const Header = () => {
                   <li className="nav-item">
                     <NavLink
                       className="nav-link"
-                      to="/login"
+                      to="/#"
                       activeClassName="active"
                     >
                       Login
