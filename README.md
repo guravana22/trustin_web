@@ -10,7 +10,8 @@ Node.js: Ensure you have Node.js installed. You can download it from Node.js off
 npm or Yarn: npm (comes with Node.js) or Yarn (an alternative package manager). If you choose Yarn, you can install it from Yarn official website.
 
 
-Installation
+Installation 
+
 1.Clone the Repository
      git clone https://github.com/guravana22/trustin_web.git
 2.Navigate to Project Directory
@@ -25,4 +26,4 @@ Running the Project
    http://localhost:3000
 
 Building the Project
-   npm run build
+  1. npm run build
