@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import img1 from "../assets/images/instantimg.svg";
 import img2 from "../assets/images/automatedimg.svg";
 import img3 from "../assets/images/verificationimg.svg";
@@ -270,11 +270,44 @@ const Trustedexperience = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const tabsContainerRef = useRef(null);
+  const [activeTab, setActiveTab] = useState(tabsData[0].id); // Set the default active tab to the first tab
+
+  const tabContainerRefs = useRef({});
+  const [isDraggings, setIsDraggings] = useState(false);
+  const [startsX, setStartsX] = useState(0);
+  const [scrollLefts, setScrollLefts] = useState(0);
+
+  const handleMouseDowns = (e) => {
+    const currentTab = tabContainerRefs.current[activeTab];
+    if (currentTab) {
+      setIsDraggings(true);
+      setStartsX(e.pageX - currentTab.offsetLeft);
+      setScrollLefts(currentTab.scrollLeft);
+    }
+  };
+
+  const handleMouseMoves = (e) => {
+    if (!isDraggings) return;
+    e.preventDefault();
+    const currentTab = tabContainerRefs.current[activeTab];
+    if (currentTab) {
+      const x = e.pageX - currentTab.offsetLeft;
+      const walk = (x - startsX) * 2; // Scroll speed
+      currentTab.scrollLeft = scrollLefts - walk;
+    }
+  };
+
+  const handleMouseUpOrLeaves = () => {
+    setIsDraggings(false);
+  };
 
   const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - tabsContainerRef.current.offsetLeft);
-    setScrollLeft(tabsContainerRef.current.scrollLeft);
+    const container = tabsContainerRef.current;
+    if (container) {
+      setIsDragging(true);
+      setStartX(e.pageX - container.offsetLeft);
+      setScrollLeft(container.scrollLeft);
+    }
   };
 
   const handleMouseLeave = () => {
@@ -288,30 +321,38 @@ const Trustedexperience = () => {
   const handleMouseMove = (e) => {
     if (!isDragging) return;
     e.preventDefault();
-    const x = e.pageX - tabsContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 20;
-    tabsContainerRef.current.scrollLeft = scrollLeft - walk;
+    const container = tabsContainerRef.current;
+    if (container) {
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 20;
+      container.scrollLeft = scrollLeft - walk;
+    }
   };
 
   const handleScroll = (direction) => {
     const scrollAmount = 2;
-    tabsContainerRef.current.scrollBy({
-      left: direction === "left" ? -scrollAmount : scrollAmount,
-      behavior: "smooth",
-    });
+    const container = tabsContainerRef.current;
+    if (container) {
+      container.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
   };
+
   const renderTabs = () => {
     return tabsData.map((tab) => (
       <li className="nav-item" role="presentation" key={tab.id}>
         <button
-          className={`nav-link ${tab.id === "pills-buyer" ? "active" : ""}`}
+          className={`nav-link ${tab.id === activeTab ? "active" : ""}`}
           id={`${tab.id}-tab`}
           data-bs-toggle="pill"
           data-bs-target={`#${tab.id}`}
           type="button"
           role="tab"
           aria-controls={tab.id}
-          aria-selected={tab.id === "pills-buyer"}
+          aria-selected={tab.id === activeTab}
+          onClick={() => setActiveTab(tab.id)}
         >
           {tab.label}
         </button>
@@ -359,22 +400,39 @@ const Trustedexperience = () => {
     return tabsData.map((tab) => (
       <div
         key={tab.id}
-        className={`tab-pane fade ${
-          tab.id === "pills-buyer" ? "show active" : ""
-        }`}
+        className={`tab-pane fade ${tab.id === activeTab ? "show active" : ""}`}
         id={tab.id}
         role="tabpanel"
         aria-labelledby={`${tab.id}-tab`}
         tabIndex="0"
       >
         <div className="container-fluid text-start">
-          <div className="row row-cols-1 row-cols-md-3 g-4">
+          <div
+            className="row row-cols-1 row-cols-md-3 g-4 cards-container"
+            ref={(el) => (tabContainerRefs.current[tab.id] = el)}
+            onMouseDown={handleMouseDowns}
+            onMouseMove={handleMouseMoves}
+            onMouseUp={handleMouseUpOrLeaves}
+            onMouseLeave={handleMouseUpOrLeaves}
+          >
             {renderCards(tab.cards)}
           </div>
         </div>
       </div>
     ));
   };
+
+  useEffect(() => {
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener("mouseleave", handleMouseUp);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("mouseleave", handleMouseUp);
+    };
+  }, [isDragging, startX, scrollLeft]);
 
   return (
     <React.Fragment>
@@ -384,7 +442,7 @@ const Trustedexperience = () => {
       >
         <div className="container">
           <div className="row">
-            <div class="col-xl-6 col-lg-8 col-md-12">
+            <div className="col-xl-6 col-lg-8 col-md-12">
               <h2 className="sub_heading" style={{ color: "#000714" }}>
                 Trusted Transactions, Shaped By Your Story
               </h2>
@@ -409,7 +467,7 @@ const Trustedexperience = () => {
                 onMouseMove={handleMouseMove}
               >
                 <ul
-                  className="nav nav-pills mb-3 flex-row  nav-justified transaction_tabs tabs_section"
+                  className="nav nav-pills mb-3 flex-row nav-justified transaction_tabs tabs_section"
                   id="pills-tab"
                   role="tablist"
                 >

@@ -1519,17 +1519,56 @@ p {
   margin: 0;
 }
 
-/* .nav-item {
-  display: inline-flex;
-} */
-/* .nav-link {
-  flex: 1;
-  white-space: nowrap;
-} */
-
 .tabs-scroll-container::-webkit-scrollbar {
   display: none;
 }
 .tabs-scroll-container {
   scrollbar-width: none;
+}
+
+.tabs-scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tabs-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-container {
+  cursor: grab;
+}
+
+.cards-container:active {
+  cursor: grabbing;
+}
+
+@media (max-width: 767px) {
+  .cards-container {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+
+  .cards-container .col {
+    flex: 0 0 auto;
+    display: inline-block;
+  }
+
+  .cards-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cards-container {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .cards-container {
+    scroll-behavior: smooth;
+  }
 }
