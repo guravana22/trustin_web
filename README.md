@@ -10,7 +10,7 @@ Prerequisites
 2. npm or Yarn: npm (comes with Node.js) or Yarn (an alternative package manager). If you choose Yarn, you can install it from Yarn official website.
 
 
-Installation steos
+Installation steps
 
 1. Clone the Repository
      git clone https://github.com/guravana22/trustin_web.git
