@@ -81,10 +81,10 @@ const Workexperience = () => {
     return data.map((card) => (
       <div key={card.id} className="item">
         <div
-          className="card Workexperience_cards"
-          style={{ backgroundColor: card.bgcolor, border: "none" }}
+          className="card Workexperience_cards border border-0"
+          style={{ backgroundColor: card.bgcolor }}
         >
-          <div className="card-body" style={{ padding: "30px 0px 20px 20px" }}>
+          <div>
             <div className="image-container separator">
               <img
                 src={card.bottomImg}
