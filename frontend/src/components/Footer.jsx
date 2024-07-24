@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
 import facebookIcon from "../assets/images/facebook.svg";
@@ -44,6 +44,27 @@ const socialMediaIcons = [
 ];
 
 const Footer = () => {
+  const [showMore, setShowMore] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+      if (window.innerWidth >= 768) {
+        setShowMore(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
   return (
     <React.Fragment>
       <div className="footer_section" style={{ position: "relative" }}>
@@ -107,34 +128,53 @@ const Footer = () => {
                 Commercial License no. 000008461, having its registered address
                 at Office 512, Level 11, Al Sarab Tower, Abu Dhabi Global Market
                 Square, Al Maryah Island, Abu Dhabi, United Arab Emirates
-                (“Company”). The Company is regulated by the Financial Services
-                Regulatory Authority (FSRA) of ADGM under Financial Services
-                Permission Number 240003 and authorized to provide Money
-                Services Business (including escrow services). These Terms set
-                out the terms and conditions governing your use and access of:
+                (“Company”).
+                {isMobile && !showMore && (
+                  <span className="readmore_text" onClick={toggleShowMore}>
+                    Read More
+                  </span>
+                )}
               </p>
-              <p className="copyright_paragraph">
-                “Business Conduct Rules” means the Conduct of Business Rulebook
-                (COBS) set out by the FSRA available at Conduct of Business
-                Rules (COBS) | Rulebook (thomsonreuters.com).
-              </p>
-              <p className="copyright_paragraph">
-                “Buyer” means, with respect to a Person or Legal Person being a
-                Registered User who seeks to purchase products and/or services
-                from another Registered User and remit monies through the escrow
-                Service offered by the Company on the Platform.
-              </p>
-              <p className="copyright_paragraph">
-                “IPR” means all intellectual property or other proprietary
-                rights worldwide, registered or to be registered, including
-                patent, trademark, service mark, copyright, trade secret,
-                know-how, moral right, all materials related to the Platform
-                (“Platform Materials”) and any other intellectual and intangible
-                property rights including all continuations whether in full or
-                in part, applications, renewals, and extensions of any of the
-                foregoing of the Company or any of its Affiliates, whether
-                registered or unregistered.
-              </p>
+              {(!isMobile || showMore) && (
+                <>
+                  <p className="copyright_paragraph">
+                    The Company is regulated by the Financial Services
+                    Regulatory Authority (FSRA) of ADGM under Financial Services
+                    Permission Number 240003 and authorized to provide Money
+                    Services Business (including escrow services). These Terms
+                    set out the terms and conditions governing your use and
+                    access of:
+                  </p>
+                  <p className="copyright_paragraph">
+                    “Business Conduct Rules” means the Conduct of Business
+                    Rulebook (COBS) set out by the FSRA available at Conduct of
+                    Business Rules (COBS) | Rulebook (thomsonreuters.com).
+                  </p>
+                  <p className="copyright_paragraph">
+                    “Buyer” means, with respect to a Person or Legal Person
+                    being a Registered User who seeks to purchase products
+                    and/or services from another Registered User and remit
+                    monies through the escrow Service offered by the Company on
+                    the Platform.
+                  </p>
+                  <p className="copyright_paragraph">
+                    “IPR” means all intellectual property or other proprietary
+                    rights worldwide, registered or to be registered, including
+                    patent, trademark, service mark, copyright, trade secret,
+                    know-how, moral right, all materials related to the Platform
+                    (“Platform Materials”) and any other intellectual and
+                    intangible property rights including all continuations
+                    whether in full or in part, applications, renewals, and
+                    extensions of any of the foregoing of the Company or any of
+                    its Affiliates, whether registered or unregistered.
+                    {isMobile && (
+                      <span className="readmore_text" onClick={toggleShowMore}>
+                        Show less
+                      </span>
+                    )}
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </div>

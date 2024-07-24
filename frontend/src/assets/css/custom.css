@@ -1474,3 +1474,11 @@ p {
   object-fit: contain;
   height: auto;
 }
+.readmore_text {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: capitalize;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #000;
+}
