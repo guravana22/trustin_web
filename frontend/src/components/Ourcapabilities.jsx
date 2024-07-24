@@ -287,8 +287,8 @@ const Ourcapabilities = () => {
   const renderCards = (cards, showAll) => {
     const cardsToShow = showAll || !isMobile ? cards : cards.slice(0, 2);
     return cardsToShow.map((card) => (
-      <div key={card.id} className="col-lg-4 col-md-6">
-        <div className="card h-100 card1">
+      <div key={card.id} className="col-lg-4 col-md-6 pe-2">
+        <div className="card h-100 card1 m-0">
           <div className="card-body" style={{ position: "relative" }}>
             <div className="background-grid">
               <div
