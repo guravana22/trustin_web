@@ -459,16 +459,16 @@ ul li span {
 }
 
 .tabs_section.nav-pills .nav-link:hover {
-  color: #ff0000;
+  color: #ff6600;
   background-color: unset;
 }
 
 .tabs_section.nav-pills .nav-link.active,
 .tabs_section .nav-pills .show > .nav-link {
-  color: #ff0000;
+  color: #ff6600;
   background-color: unset;
   border-color: none;
-  border-bottom: 2px solid #ff0000;
+  border-bottom: 2px solid #ff6600;
 }
 
 .banner_section_footer {
@@ -1466,4 +1466,11 @@ p {
 .hover-svg .svg-path {
   stroke: white;
   transition: stroke 1s ease;
+}
+
+.owl-carousel .owl-item .client_img {
+  display: block;
+  width: 70%;
+  object-fit: contain;
+  height: auto;
 }

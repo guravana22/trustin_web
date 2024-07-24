@@ -2,7 +2,6 @@
   .home-section {
     height: auto;
     padding-top: 100px;
-    padding-bottom: 50px;
   }
 
   .navbar-expand-md {
@@ -130,6 +129,11 @@
   }
   .textbg {
     display: none;
+  }
+
+  .owl-carousel .owl-item .client_img {
+    display: block;
+    width: 120% !important;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
