@@ -525,9 +525,7 @@ ul li span {
   border: 2px solid #000714;
   border-right: 0px;
   border-radius: 5px 0px 0px 8px;
-  /* z-index: 1; */
   opacity: 0;
-  /* Hide by default */
   transition: opacity 0.3s ease-out;
 }
 
@@ -776,12 +774,6 @@ ul li span {
   position: absolute;
   bottom: -211px;
 }
-
-/* .learnmore_paragraph::after {
-  content: "\2192";
-  margin-left: 10px;
-} */
-
 .main-border-container {
   border: 3px solid #000;
   padding: 10px;
@@ -974,7 +966,6 @@ ul li span {
   line-height: 24px;
   font-size: 16px;
   font-style: normal;
-  /* width: 50%; */
 }
 
 .card_heading {
@@ -1043,24 +1034,24 @@ ul li span {
   transform: translateX(-115%);
 }
 .righthoverimg {
-  transition: transform 1s ease; /* Slower transition duration */
+  transition: transform 1s ease;
 }
 
 .tophoverimg {
-  transition: transform 1s ease; /* Slower transition duration */
+  transition: transform 1s ease;
 }
 #container-fluid:hover .tophoverimg {
   transform: translateX(115%);
 }
 .bottomhoverimg {
-  transition: transform 1s ease; /* Slower transition duration */
+  transition: transform 1s ease;
 }
 #container-fluid:hover .bottomhoverimg {
   transform: translateX(70%);
 }
 
 .lefthoverimg {
-  transition: transform 1s ease; /* Slower transition duration */
+  transition: transform 1s ease;
 }
 #container-fluid:hover .lefthoverimg {
   transform: translateX(-70%);
@@ -1231,7 +1222,6 @@ ul li span {
   top: -30px;
   left: 100px;
   width: 80%;
-  /* opacity: 0.9; */
 }
 
 h3,
@@ -1389,7 +1379,6 @@ p {
 }
 
 .card1:hover .learnmore_paragraph {
-  /* color: #000714; */
   transition: color 1s ease;
 }
 
@@ -1488,10 +1477,6 @@ p {
 .hover-svgs {
   transition: transform 1s ease, stroke 1s ease;
 }
-
-/* .card1:hover .hover-svgs {
-  transform: rotate(-20deg);
-} */
 
 .hover-svgs .svg-paths {
   stroke: white;
