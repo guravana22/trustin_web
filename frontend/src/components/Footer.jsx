@@ -78,7 +78,7 @@ const Footer = () => {
               </div>
             </div>
             {footerSections.map((section, index) => (
-              <div key={index} className="col-md-6 col-lg-2 col-sm-2 mb-4">
+              <div key={index} className="col-md-6 col-lg-2 col-sm-6 mb-4">
                 <ul className="footer_links m-0">
                   <li>
                     <h3>{section.title}</h3>

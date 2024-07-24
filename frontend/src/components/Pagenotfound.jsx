@@ -14,7 +14,11 @@ const Pagenotfound = () => {
         </div>
         <div className="mt-4">
           <NavLink to="/">
-            <button type="button" className="login_button mx-auto">
+            <button
+              type="button"
+              className="login_button mx-auto"
+              style={{ width: "unset" }}
+            >
               Back to Homepage
             </button>
           </NavLink>
