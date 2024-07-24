@@ -777,10 +777,10 @@ ul li span {
   bottom: -211px;
 }
 
-.learnmore_paragraph::after {
+/* .learnmore_paragraph::after {
   content: "\2192";
   margin-left: 10px;
-}
+} */
 
 .main-border-container {
   border: 3px solid #000;
@@ -1256,6 +1256,9 @@ p {
   color: #c8c8c8;
 }
 
+.card1 .learnmore_paragraph {
+  color: #fff;
+}
 .card1 {
   display: block;
   position: relative;
@@ -1385,6 +1388,11 @@ p {
   animation: slideDown 2s ease-out forwards;
 }
 
+.card1:hover .learnmore_paragraph {
+  /* color: #000714; */
+  transition: color 1s ease;
+}
+
 .card1:hover p,
 .card1:hover h3 {
   color: #000714;
@@ -1392,6 +1400,10 @@ p {
 }
 
 .card1:hover .hover-svg path {
+  stroke: #000714;
+}
+
+.card1:hover .hover-svgs path {
   stroke: #000714;
 }
 
@@ -1450,6 +1462,11 @@ p {
   transition: stroke 0.3s ease;
 }
 
+.hover-svg .svg-paths {
+  stroke: white;
+  transition: stroke 0.3s ease;
+}
+
 .card1:hover img {
   transform: scale(1.3);
   transition: transform 1s ease, stroke 1s ease;
@@ -1464,6 +1481,19 @@ p {
 }
 
 .hover-svg .svg-path {
+  stroke: white;
+  transition: stroke 1s ease;
+}
+
+.hover-svgs {
+  transition: transform 1s ease, stroke 1s ease;
+}
+
+/* .card1:hover .hover-svgs {
+  transform: rotate(-20deg);
+} */
+
+.hover-svgs .svg-paths {
   stroke: white;
   transition: stroke 1s ease;
 }

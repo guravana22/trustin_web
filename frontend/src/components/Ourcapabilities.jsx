@@ -16,13 +16,13 @@ import { ReactComponent as GoodsIcon } from "../assets/images/goodesandserviceic
 import { ReactComponent as AngleIcon } from "../assets/images/angleicon.svg";
 import { ReactComponent as MergersIcon } from "../assets/images/mergesicon.svg";
 import { ReactComponent as VcfundingIcon } from "../assets/images/vufundingicon.svg";
-
 import { ReactComponent as EscrowIcon } from "../assets/images/escrowimg.svg";
 import { ReactComponent as ApiIcon } from "../assets/images/aptinegrationimg.svg";
 import { ReactComponent as CheckoutIcon } from "../assets/images/checkoutimg.svg";
 import { ReactComponent as TargetIcon } from "../assets/images/targetimg.svg";
 import { ReactComponent as RealestatetwotIcon } from "../assets/images/realestatestwoimg.svg";
 import { ReactComponent as GoodsBagIcon } from "../assets/images/goodsbagimg.svg";
+// import { ReactComponent as RightArrowIcon } from "../assets/images/rightarrow.svg";
 
 const tabsData = [
   {
@@ -32,6 +32,7 @@ const tabsData = [
       {
         id: 1,
         image: <AutomobileIcon />,
+        image2: <RightArrowIcon />,
         title: "Automobile Escrow",
         description:
           "Secure escrow services for automobile transactions to ensure trust and transparency between buyers and sellers.",
@@ -47,6 +48,7 @@ const tabsData = [
       {
         id: 2,
         image: <RealestateIcon />,
+        image2: <RightArrowIcon />,
         title: "Real Estate Escrow",
         description:
           "Reliable escrow solutions for real estate deals, protecting all parties involved in property transactions.",
@@ -62,6 +64,7 @@ const tabsData = [
       {
         id: 3,
         image: <BrokerescrowIcon />,
+        image2: <RightArrowIcon />,
         title: "Broker Escrow",
         description:
           "Provide secure escrow services for brokers by ensuring commission payments are protected and transactions are smooth.",
@@ -77,6 +80,7 @@ const tabsData = [
       {
         id: 4,
         image: <GoodsIcon />,
+        image2: <RightArrowIcon />,
         title: "Goods & Services",
         description:
           "Safeguard payments in goods and services contracts, ensuring delivery and satisfaction for both parties.",
@@ -92,6 +96,7 @@ const tabsData = [
       {
         id: 5,
         image: <AngleIcon />,
+        image2: <RightArrowIcon />,
         title: "Angle Investment",
         description:
           "Trusted escrow services for angel investors, securing investments and providing proper fund allocation.",
@@ -107,6 +112,7 @@ const tabsData = [
       {
         id: 6,
         image: <MergersIcon />,
+        image2: <RightArrowIcon />,
         title: "Mergers & Acquisitions",
         description:
           "Facilitate secure escrow services for M&A transactions to make sure of smooth and transparent business transitions.",
@@ -122,6 +128,7 @@ const tabsData = [
       {
         id: 7,
         image: <VcfundingIcon />,
+        image2: <RightArrowIcon />,
         title: "VC Funding",
         description:
           "Secure escrow services for venture capital funding, protecting investments, and guaranteeing proper use of funds.",
@@ -143,6 +150,7 @@ const tabsData = [
       {
         id: 1,
         image: <EscrowIcon />,
+        image2: <RightArrowIcon />,
         title: "Automobile Escrow",
         description:
           "Securely buy and sell cars with verified listings and trusted transactions.",
@@ -158,6 +166,7 @@ const tabsData = [
       {
         id: 2,
         image: <RealestateIcon />,
+        image2: <RightArrowIcon />,
         title: "Real Estate Escrow",
         description:
           "Find your dream home or sell your property with confidence and transparency.",
@@ -173,6 +182,7 @@ const tabsData = [
       {
         id: 3,
         image: <GoodsIcon />,
+        image2: <RightArrowIcon />,
         title: "Goods & Services",
         description:
           "Trade goods and services safely and efficiently with trusted peer-to-peer transactions.",
@@ -194,6 +204,7 @@ const tabsData = [
       {
         id: 1,
         image: <TargetIcon />,
+        image2: <RightArrowIcon />,
         title: "E Commerce",
         description:
           "Secure online transactions with comprehensive fraud prevention and seamless user experience.",
@@ -209,6 +220,7 @@ const tabsData = [
       {
         id: 2,
         image: <RealestatetwotIcon />,
+        image2: <RightArrowIcon />,
         title: "Real Estate",
         description:
           "Streamlined property transactions with robust security and verification processes.",
@@ -224,6 +236,7 @@ const tabsData = [
       {
         id: 3,
         image: <GoodsBagIcon />,
+        image2: <RightArrowIcon />,
         title: "Goods & Services",
         description:
           "Enhanced trade assurance for reliable procurement and delivery of products and services.",
@@ -239,6 +252,7 @@ const tabsData = [
       {
         id: 4,
         image: <ApiIcon />,
+        image2: <RightArrowIcon />,
         title: "API Integrations",
         description:
           "Easily integrate secure payment solutions into existing systems for enhanced functionality.",
@@ -254,6 +268,7 @@ const tabsData = [
       {
         id: 5,
         image: <CheckoutIcon />,
+        image2: <RightArrowIcon />,
         title: "Checkout Solutions",
         description:
           "Simplify checkout processes with secure, efficient, and user-friendly payment gateways.",
@@ -287,7 +302,7 @@ const Ourcapabilities = () => {
   const renderCards = (cards, showAll) => {
     const cardsToShow = showAll || !isMobile ? cards : cards.slice(0, 2);
     return cardsToShow.map((card) => (
-      <div key={card.id} className="col-lg-4 col-md-6 pe-2">
+      <div key={card.id} className="col-lg-6 col-xl-4 col-md-6 pe-2">
         <div className="card h-100 card1 m-0">
           <div className="card-body" style={{ position: "relative" }}>
             <div className="background-grid">
@@ -321,6 +336,7 @@ const Ourcapabilities = () => {
                 style={{ display: "inline-block" }}
               >
                 Learn More
+                {card.image2}
               </p>
             </NavLink>
             <div className="col-sm-6 card_bottom_img">
