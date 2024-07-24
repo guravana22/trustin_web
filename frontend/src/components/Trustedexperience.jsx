@@ -270,7 +270,7 @@ const Trustedexperience = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const tabsContainerRef = useRef(null);
-  const [activeTab, setActiveTab] = useState(tabsData[0].id); // Set the default active tab to the first tab
+  const [activeTab, setActiveTab] = useState(tabsData[0].id);
 
   const tabContainerRefs = useRef({});
   const [isDraggings, setIsDraggings] = useState(false);
