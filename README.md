@@ -13,17 +13,19 @@ Prerequisites
 Installation steps
 
 1. Clone the Repository
-      ##### git clone https://github.com/guravana22/trustin_web.git
+      ### git clone https://github.com/guravana22/trustin_web.git
 2. Navigate to Project Directory
-   cd frontend
+      ### cd frontend
 3. Install Dependencies
-   npm install
+      ### npm install
 
 Running the Project
+
 1. Start the Development Server
-    npm start
+      ### npm start
 2. View the Application
-   http://localhost:3000
+      ### http://localhost:3000
 
 Building the Project
+
   1. npm run build
