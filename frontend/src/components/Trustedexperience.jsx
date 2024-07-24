@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import img1 from "../assets/images/instantimg.svg";
 import img2 from "../assets/images/automatedimg.svg";
 import img3 from "../assets/images/verificationimg.svg";
@@ -266,6 +266,40 @@ const tabsData = [
 ];
 
 const Trustedexperience = () => {
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const tabsContainerRef = useRef(null);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - tabsContainerRef.current.offsetLeft);
+    setScrollLeft(tabsContainerRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - tabsContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 20;
+    tabsContainerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleScroll = (direction) => {
+    const scrollAmount = 2;
+    tabsContainerRef.current.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
   const renderTabs = () => {
     return tabsData.map((tab) => (
       <li className="nav-item" role="presentation" key={tab.id}>
@@ -363,13 +397,22 @@ const Trustedexperience = () => {
           </div>
           <div className="row">
             <div className="col">
-              <ul
-                className="nav nav-pills mb-3 flex-column flex-sm-row nav-justified tabs_section"
-                id="pills-tab"
-                role="tablist"
+              <div
+                className="tabs-scroll-container"
+                ref={tabsContainerRef}
+                onMouseDown={handleMouseDown}
+                onMouseLeave={handleMouseLeave}
+                onMouseUp={handleMouseUp}
+                onMouseMove={handleMouseMove}
               >
-                {renderTabs()}
-              </ul>
+                <ul
+                  className="nav nav-pills mb-3 flex-row  nav-justified transaction_tabs tabs_section"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  {renderTabs()}
+                </ul>
+              </div>
 
               <div className="tab-content" id="pills-tabContent">
                 {renderTabContent()}

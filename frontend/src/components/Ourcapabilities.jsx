@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import cardbottomImg from "../assets/images/cardbottomimg.svg";
 import realestateImg from "../assets/images/realestatimg.svg";
@@ -287,6 +287,7 @@ const tabsData = [
 
 const Ourcapabilities = () => {
   const [showAll, setShowAll] = useState({});
+
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -297,6 +298,41 @@ const Ourcapabilities = () => {
 
   const handleShowAll = (tabId) => {
     setShowAll((prev) => ({ ...prev, [tabId]: true }));
+  };
+
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const tabsContainerRef = useRef(null);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - tabsContainerRef.current.offsetLeft);
+    setScrollLeft(tabsContainerRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - tabsContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 10;
+    tabsContainerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleScroll = (direction) => {
+    const scrollAmount = 2;
+    tabsContainerRef.current.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
   };
 
   const renderCards = (cards, showAll) => {
@@ -367,28 +403,37 @@ const Ourcapabilities = () => {
           </div>
           <div className="row">
             <div className="col">
-              <ul
-                className="nav nav-pills mb-3 flex-row flex-sm-row nav-justified tabs_section capabilitiestabs"
-                id="pills-tab"
-                role="tablist"
+              <div
+                className="tabs-scroll-container"
+                ref={tabsContainerRef}
+                onMouseDown={handleMouseDown}
+                onMouseLeave={handleMouseLeave}
+                onMouseUp={handleMouseUp}
+                onMouseMove={handleMouseMove}
               >
-                {tabsData.map((tab, index) => (
-                  <li className="nav-item" role="presentation" key={tab.id}>
-                    <button
-                      className={`nav-link ${index === 0 ? "active" : ""}`}
-                      id={`${tab.id}-tab`}
-                      data-bs-toggle="pill"
-                      data-bs-target={`#${tab.id}`}
-                      type="button"
-                      role="tab"
-                      aria-controls={tab.id}
-                      aria-selected={index === 0 ? "true" : "false"}
-                    >
-                      {tab.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
+                <ul
+                  className="nav nav-pills mb-3 flex-row nav-justified tabs_section capabilitiestabs"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  {tabsData.map((tab, index) => (
+                    <li className="nav-item" role="presentation" key={tab.id}>
+                      <button
+                        className={`nav-link ${index === 0 ? "active" : ""}`}
+                        id={`${tab.id}-tab`}
+                        data-bs-toggle="pill"
+                        data-bs-target={`#${tab.id}`}
+                        type="button"
+                        role="tab"
+                        aria-controls={tab.id}
+                        aria-selected={index === 0 ? "true" : "false"}
+                      >
+                        {tab.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               <div className="tab-content" id="pills-tabContent">
                 {tabsData.map((tab, index) => (
