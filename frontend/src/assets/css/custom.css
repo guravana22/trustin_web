@@ -98,6 +98,40 @@ body {
   color: #00edc1;
 }
 
+.navbar .dropdown-menu {
+  border: none;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.05);
+  color: #fff !important;
+  position: relative;
+}
+
+a:hover {
+  color: unset !important;
+}
+
+.dropdown_menu a:hover {
+  color: #00edc1;
+  background-color: unset;
+  transition: 0.3s;
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+  font-weight: 400;
+  margin-bottom: -8px;
+}
+
+.dropdown_menu a {
+  font-size: 14px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.dropdown-item p {
+  display: none;
+  margin-top: 5px;
+}
+
 .nav-link {
   padding: 20px !important;
   font-size: 18px !important;
@@ -1535,40 +1569,4 @@ p {
 
 .tabs-scroll-container::-webkit-scrollbar {
   display: none;
-}
-
-.cards-container {
-  cursor: grab;
-}
-
-.cards-container:active {
-  cursor: grabbing;
-}
-
-@media (max-width: 767px) {
-  .cards-container {
-    overflow-x: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 16px;
-  }
-
-  .cards-container .col {
-    flex: 0 0 auto;
-    display: inline-block;
-  }
-
-  .cards-container::-webkit-scrollbar {
-    display: none;
-  }
-
-  .cards-container {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .cards-container {
-    scroll-behavior: smooth;
-  }
 }
